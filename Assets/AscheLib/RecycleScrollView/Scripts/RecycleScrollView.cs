@@ -10,10 +10,10 @@ namespace AscheLib.UI {
 	public class RecycleScrollView : MonoBehaviour {
 		#region ScrollViewSettings
 		[SerializeField]
-		ScrollType _scrollType;
+		ScrollType _scrollType = ScrollType.Vertical;
 
 		[SerializeField]
-		ScrollRect.MovementType _movementType;
+		ScrollRect.MovementType _movementType = ScrollRect.MovementType.Elastic;
 
 		[SerializeField]
 		float _elasticity = 0.1f;
@@ -28,10 +28,10 @@ namespace AscheLib.UI {
 		float _scrollSensitivity = 1.0f;
 
 		[SerializeField]
-		Scrollbar _scrollbar;
+		Scrollbar _scrollbar = null;
 
 		[SerializeField]
-		ScrollRect.ScrollbarVisibility _scrollbarVisibility;
+		ScrollRect.ScrollbarVisibility _scrollbarVisibility = ScrollRect.ScrollbarVisibility.AutoHide;
 
 		[SerializeField]
 		ScrollRect.ScrollRectEvent _onValueChanged = new ScrollRect.ScrollRectEvent ();
@@ -45,16 +45,16 @@ namespace AscheLib.UI {
 
 		#region GridSetting
 		[SerializeField]
-		GameObject _cellPrefab;
+		GameObject _cellPrefab = null;
 
 		[SerializeField]
 		Vector2 _cellSize = new Vector2(100, 30);
 
 		[SerializeField]
-		int _columnLimit;
+		int _columnLimit = 1;
 
 		[SerializeField]
-		ArrangementType _arrangementType;
+		ArrangementType _arrangementType = ArrangementType.LeftUpToRightDown;
 		#endregion
 
 		DisposableBundle _currentDisposable = null;

@@ -5,7 +5,7 @@ using AscheLib.UI;
 // Cell component for displaying test data
 class ExampleCell : MonoBehaviour, IScrollableCell<ExampleData> {
 	[SerializeField]
-	Text _textLabel;
+	Text _textLabel = null;
 
 	// Hold the set data
 	ExampleData _cacheData = null;

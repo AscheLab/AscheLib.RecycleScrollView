@@ -4,6 +4,25 @@ Created by Syunta Washidu (AscheLab)
 ## What's RecycleScrollView?
 RecycleScrollView is a library to easily implement a scroll view that can be recycled to reduce object generation cost when displaying a large amount of data
 
+## Install
+### Using UnityPackageManager
+Find the manifest.json file in the Packages folder of your project and edit it to look like this.
+```
+"scopedRegistries": [
+    {
+      "name": "Unofficial Unity Package Manager Registry",
+      "url": "https://upm-packages.dev",
+      "scopes": [
+        "com.aschelab"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.aschelab.common.disposable": "1.0.4",
+    "com.aschelab.recyclescrollview": "1.0.3",
+  ...
+  }
+```
 ## Using for RecycleScrollView
 ```csharp
 using UnityEngine;

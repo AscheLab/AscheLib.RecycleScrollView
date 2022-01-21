@@ -7,11 +7,11 @@ using AscheLib.UI;
 class Example : MonoBehaviour {
 	// Set Scroll View object to display data from Inspector
 	[SerializeField]
-	RecycleScrollView _scrollView;
+	RecycleScrollView _scrollView = null;
 
 	// Number of test data
 	[SerializeField]
-	int _dataRange;
+	int _dataRange = 50;
 
 	private void Start () {
 		// Create test data.

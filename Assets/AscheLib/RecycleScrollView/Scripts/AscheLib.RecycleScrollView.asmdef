@@ -1,0 +1,14 @@
+{
+    "name": "AscheLib.RecycleScrollView",
+    "references": [
+        "AscheLib.Common.Disposable"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

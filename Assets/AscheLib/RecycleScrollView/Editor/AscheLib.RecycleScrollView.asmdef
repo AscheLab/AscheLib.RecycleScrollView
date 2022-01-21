@@ -1,0 +1,16 @@
+{
+    "name": "AscheLib.RecycleScrollView.Editor",
+    "references": [
+        "AscheLib.RecycleScrollView"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
