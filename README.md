@@ -19,7 +19,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
   ],
   "dependencies": {
     "com.aschelab.common.disposable": "1.0.4",
-    "com.aschelab.recyclescrollview": "1.0.3",
+    "com.aschelab.recyclescrollview": "1.1.0",
   ...
   }
 ```
