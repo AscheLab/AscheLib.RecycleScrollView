@@ -35,12 +35,36 @@ namespace AscheLib.UI {
 
 		[SerializeField]
 		ScrollRect.ScrollRectEvent _onValueChanged = new ScrollRect.ScrollRectEvent ();
+		#endregion
 
+		#region MaskSettings
 		[SerializeField]
 		bool _showMaskGraphic = false;
 
 		[SerializeField]
-		Sprite _maskImage = null;
+		Sprite _maskSprite = null;
+
+		[SerializeField]
+		Image.Type _type = Image.Type.Sliced;
+
+		[SerializeField]
+		bool _useSpriteMesh = false;
+		
+		[SerializeField]
+		bool _fillCenter = true;
+
+		[SerializeField]
+		Image.FillMethod _fillMethod = Image.FillMethod.Radial360;
+
+		[SerializeField]
+		int _fillOrigin = 0;
+
+		[Range(0, 1)]
+		[SerializeField]
+		float _fillAmount = 1.0f;
+
+		[SerializeField]
+		bool _fillClockwise = true;
 		#endregion
 
 		#region GridSetting
@@ -58,6 +82,26 @@ namespace AscheLib.UI {
 		#endregion
 
 		DisposableBundle _currentDisposable = null;
+
+		public Sprite maskSprite
+		{
+			get
+			{
+				return _maskSprite;
+			}
+		}
+		public bool hasMaskBorder
+		{
+			get
+			{
+				if (_maskSprite != null)
+				{
+					Vector4 v = _maskSprite.border;
+					return v.sqrMagnitude > 0f;
+				}
+				return false;
+			}
+		}
 
 		public IDisposable SetDatas<T>(IEnumerable<T> datas) {
 			// Dispose before scroll
@@ -172,8 +216,15 @@ namespace AscheLib.UI {
 			result.SetParent(viewportRoot);
 			FitRectTransform(viewportRoot, result);
 			mask.showMaskGraphic = _showMaskGraphic;
-			if(_maskImage != null) {
-				maskImage.sprite = _maskImage;
+			if(_maskSprite != null) {
+				maskImage.sprite = _maskSprite;
+				maskImage.type = _type;
+				maskImage.useSpriteMesh = _useSpriteMesh;
+				maskImage.fillCenter = _fillCenter;
+				maskImage.fillMethod = _fillMethod;
+				maskImage.fillOrigin = _fillOrigin;
+				maskImage.fillAmount = _fillAmount;
+				maskImage.fillClockwise = _fillClockwise;
 			}
 			return result;
 		}
